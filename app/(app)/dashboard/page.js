@@ -49,35 +49,35 @@ export default function Dashboard() {
           <td className="r">$412.08</td>
           <td className="r up">+8.42%</td>
           <td className="r">$12.14M</td>
-          <td className="r"><svg className="spark" width="80" height="22"><polyline points="0,18 10,17 20,15 30,13 40,12 50,9 60,10 70,6 80,3" fill="none" stroke="#7FDCAE" strokeWidth="1.2"/></svg></td>
+          <td className="r"><svg className="spark" width="80" height="22"><polyline points="0,18 10,17 20,15 30,13 40,12 50,9 60,10 70,6 80,3" fill="none" stroke="#00A684" strokeWidth="1.6"/></svg></td>
         </tr>
         <tr>
           <td><div className="ticker"><div className="logo">OB</div><div className="name"><div className="n">Obsidian Labs</div><div className="s">OBS · Series B</div></div></div></td>
           <td className="r">$228.19</td>
           <td className="r up">+5.71%</td>
           <td className="r">$2.91M</td>
-          <td className="r"><svg className="spark" width="80" height="22"><polyline points="0,16 10,18 20,13 30,15 40,10 50,12 60,8 70,6 80,4" fill="none" stroke="#7FDCAE" strokeWidth="1.2"/></svg></td>
+          <td className="r"><svg className="spark" width="80" height="22"><polyline points="0,16 10,18 20,13 30,15 40,10 50,12 60,8 70,6 80,4" fill="none" stroke="#00A684" strokeWidth="1.6"/></svg></td>
         </tr>
         <tr>
           <td><div className="ticker"><div className="logo">NV</div><div className="name"><div className="n">Nova Robotics</div><div className="s">NVR · Series D</div></div></div></td>
           <td className="r">$142.80</td>
           <td className="r up">+3.14%</td>
           <td className="r">$4.82M</td>
-          <td className="r"><svg className="spark" width="80" height="22"><polyline points="0,15 10,13 20,11 30,12 40,9 50,10 60,6 70,7 80,3" fill="none" stroke="#7FDCAE" strokeWidth="1.2"/></svg></td>
+          <td className="r"><svg className="spark" width="80" height="22"><polyline points="0,15 10,13 20,11 30,12 40,9 50,10 60,6 70,7 80,3" fill="none" stroke="#00A684" strokeWidth="1.6"/></svg></td>
         </tr>
         <tr>
           <td><div className="ticker"><div className="logo">HL</div><div className="name"><div className="n">Helios Compute</div><div className="s">HLO · Series C</div></div></div></td>
           <td className="r">$86.14</td>
           <td className="r down">-1.82%</td>
           <td className="r">$1.62M</td>
-          <td className="r"><svg className="spark" width="80" height="22"><polyline points="0,6 10,8 20,7 30,10 40,9 50,11 60,10 70,13 80,14" fill="none" stroke="#EF6680" strokeWidth="1.2"/></svg></td>
+          <td className="r"><svg className="spark" width="80" height="22"><polyline points="0,6 10,8 20,7 30,10 40,9 50,11 60,10 70,13 80,14" fill="none" stroke="#EF4444" strokeWidth="1.6"/></svg></td>
         </tr>
         <tr>
           <td><div className="ticker"><div className="logo">PR</div><div className="name"><div className="n">Prism Networks</div><div className="s">PRX · Series B</div></div></div></td>
           <td className="r">$31.60</td>
           <td className="r down">-2.31%</td>
           <td className="r">$0.64M</td>
-          <td className="r"><svg className="spark" width="80" height="22"><polyline points="0,5 10,7 20,6 30,9 40,8 50,10 60,9 70,12 80,14" fill="none" stroke="#EF6680" strokeWidth="1.2"/></svg></td>
+          <td className="r"><svg className="spark" width="80" height="22"><polyline points="0,5 10,7 20,6 30,9 40,8 50,10 60,9 70,12 80,14" fill="none" stroke="#EF4444" strokeWidth="1.6"/></svg></td>
         </tr>
       </tbody>
     </table>

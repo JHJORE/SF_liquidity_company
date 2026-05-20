@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useContext, useReducer, useEffect } from 'react';
+import { createContext, useContext, useReducer } from 'react';
 
 const AuthContext = createContext(null);
 
@@ -36,19 +36,12 @@ function reducer(state, action) {
 export function AuthProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initial);
 
-  useEffect(() => {
-    if (state.signedIn) {
-      document.body.style.overflow = '';
-    } else {
-      document.body.style.overflow = 'hidden';
-    }
-  }, [state.signedIn]);
-
   const setField = (field, value) => dispatch({ type: 'SET_FIELD', field, value });
   const setRole = (role) => dispatch({ type: 'SET_ROLE', role });
   const signOut = () => dispatch({ type: 'SIGN_OUT' });
+  const signIn = () => dispatch({ type: 'SIGN_IN' });
 
-  const submit = (e) => {
+  const submit = (e, onSuccess) => {
     e?.preventDefault?.();
     const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.email);
     const pwValid = (state.password || '').length >= 12;
@@ -61,11 +54,14 @@ export function AuthProvider({ children }) {
       return;
     }
     dispatch({ type: 'SUBMIT_START' });
-    setTimeout(() => dispatch({ type: 'SIGN_IN' }), 700);
+    setTimeout(() => {
+      dispatch({ type: 'SIGN_IN' });
+      onSuccess?.();
+    }, 700);
   };
 
   return (
-    <AuthContext.Provider value={{ state, setField, setRole, signOut, submit }}>
+    <AuthContext.Provider value={{ state, setField, setRole, signOut, signIn, submit }}>
       {children}
     </AuthContext.Provider>
   );
@@ -78,10 +74,11 @@ export function useAuth() {
 }
 
 export const ROLE_ACCESS = {
-  '/': ['investor', 'issuer', 'operator'],
+  '/dashboard': ['investor', 'issuer', 'operator'],
   '/market': ['investor', 'issuer', 'operator'],
   '/derivatives': ['investor', 'operator'],
   '/portfolio': ['investor'],
   '/orders': ['investor', 'issuer'],
   '/admin/issuer': ['issuer', 'operator'],
+  '/holder': ['investor', 'issuer', 'operator'],
 };

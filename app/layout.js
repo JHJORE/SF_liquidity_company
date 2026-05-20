@@ -1,22 +1,19 @@
-import { Geist, Geist_Mono, Instrument_Serif } from 'next/font/google';
+import { DM_Sans, JetBrains_Mono, Instrument_Serif } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import { AuthProvider } from '@/lib/auth-context';
-import Topbar from '@/components/Topbar';
-import Statusbar from '@/components/Statusbar';
-import AuthShell from '@/components/AuthShell';
 import './globals.css';
 
-const geist = Geist({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-geist',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-dm-sans',
   display: 'swap',
 });
 
-const geistMono = Geist_Mono({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  variable: '--font-geist-mono',
+  weight: ['400', '500', '600'],
+  variable: '--font-jetbrains-mono',
   display: 'swap',
 });
 
@@ -29,8 +26,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata = {
-  title: 'San Francisco Liquidity Company',
-  description: 'Internal and external liquidity venues for venture-backed equity.',
+  title: 'SFLC — Tokenized equity infrastructure for private companies',
+  description:
+    'The tokenized equity management system and ledger for private companies. Programmable ownership, automated compliance, instant stablecoin settlement.',
 };
 
 export const viewport = {
@@ -40,14 +38,12 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable}`}>
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable}`}
+    >
       <body>
-        <AuthProvider>
-          <Topbar />
-          <Statusbar />
-          <main className="screen active">{children}</main>
-          <AuthShell />
-        </AuthProvider>
+        <AuthProvider>{children}</AuthProvider>
         <Analytics />
       </body>
     </html>

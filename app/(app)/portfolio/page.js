@@ -16,12 +16,12 @@ export default function Portfolio() {
       <svg viewBox="0 0 1200 110" preserveAspectRatio="none" style={{width: '100%', height: '110px'}}>
         <defs>
           <linearGradient id="portFill" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0%" stopColor="#A8C8F7" stopOpacity="0.22"/>
-            <stop offset="100%" stopColor="#A8C8F7" stopOpacity="0"/>
+            <stop offset="0%" stopColor="#00D4A8" stopOpacity="0.22"/>
+            <stop offset="100%" stopColor="#00D4A8" stopOpacity="0"/>
           </linearGradient>
         </defs>
         <path d="M0,78 L60,74 L120,82 L180,68 L240,64 L300,70 L360,52 L420,58 L480,46 L540,50 L600,42 L660,32 L720,44 L780,28 L840,24 L900,34 L960,20 L1020,24 L1080,14 L1140,18 L1200,10 L1200,110 L0,110 Z" fill="url(#portFill)"/>
-        <path d="M0,78 L60,74 L120,82 L180,68 L240,64 L300,70 L360,52 L420,58 L480,46 L540,50 L600,42 L660,32 L720,44 L780,28 L840,24 L900,34 L960,20 L1020,24 L1080,14 L1140,18 L1200,10" fill="none" stroke="#A8C8F7" strokeWidth="1.5"/>
+        <path d="M0,78 L60,74 L120,82 L180,68 L240,64 L300,70 L360,52 L420,58 L480,46 L540,50 L600,42 L660,32 L720,44 L780,28 L840,24 L900,34 L960,20 L1020,24 L1080,14 L1140,18 L1200,10" fill="none" stroke="#00A684" strokeWidth="1.8"/>
       </svg>
     </div>
     <div className="hstack" style={{justifyContent: 'space-between', marginTop: '10px', fontFamily: 'var(--mono)', fontSize: '10px', color: 'var(--silver-3)', letterSpacing: '0.14em'}}>
